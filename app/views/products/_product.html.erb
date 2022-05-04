@@ -12,4 +12,17 @@
       <%= fa_icon "shopping-cart", text: 'Add' %> 
     <% end %>
   </div>
+
+  <% if product.quantity === 0 %>
+<aside class = 'sold-out'>
+Sold Out
+</aside>
+
+<aside class='price'>
+<% number_to_currency(product.price) %>
+</aside>
+
+<% end %>
 </article>
+
+
